@@ -7,18 +7,18 @@
     </form>
     <br><br>
 
-    <div class="row" *ngFor='let user of infos;let i = index'>
+    <div class="row">
         <div class="col-md-6">
             <img src="https://avatars3.githubusercontent.com/u/439365?v=4" alt="profile">
-            {{user.avatar_url}}
+            {{gitUser.avatar_url}}
         </div>
         <div class="col-md-6" >
-            <p>Name:{{user.Name}}</p>
-            <p>Email:{{user.Email}}</p>
-            <p>Bio:{{user.Bio}}</p>
-            <p>Location:{{user.Location}}</p>
-            <p>Company:{{user.Company}}</p>
-            <p>Repositories:{{user.Repositories}}</p>
+            <p>Name:{{gitUser.Name}}</p>
+            <p>Email:{{gitUser.Email}}</p>
+            <p>Bio:{{gitUser.Bio}}</p>
+            <p>Location:{{gitUser.Location}}</p>
+            <p>Company:{{gitUser.Company}}</p>
+            <p>Repositories:{{gitUser.Repositories}}</p>
         </div>
     </div>
 </div>
