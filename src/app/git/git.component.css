@@ -2,6 +2,11 @@
     font-size: 20px;
     display: table;
 }
+form.search input[type=text]{
+    background: #f7eeee;
+    border: 1px solid grey;
+    height: 36px;
+}
 button{
     width:50px;
     height: 36px;
