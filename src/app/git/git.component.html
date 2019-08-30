@@ -2,23 +2,23 @@
     <hr>
     <p style="font-size: 18px;">Please enter your Github username to get your information.</p>
     <form class="search">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Search.." id="search" name="search">
+        <button type="submit" (click)="search"><i class="fa fa-search"></i></button>
     </form>
     <br><br>
 
     <div class="row">
         <div class="col-md-6">
             <img src="https://avatars3.githubusercontent.com/u/439365?v=4" alt="profile">
-            {{gitUser.avatar_url}}
+            {{response.avatar_url}}
         </div>
         <div class="col-md-6" >
-            <p>Name:{{gitUser.Name}}</p>
-            <p>Email:{{gitUser.Email}}</p>
-            <p>Bio:{{gitUser.Bio}}</p>
-            <p>Location:{{gitUser.Location}}</p>
-            <p>Company:{{gitUser.Company}}</p>
-            <p>Repositories:{{gitUser.Repositories}}</p>
+            <p>Name:{{response.Name}}</p>
+            <p>Email:{{response.Email}}</p>
+            <p>Bio:{{response.Bio}}</p>
+            <p>Location:{{response.Location}}</p>
+            <p>Company:{{response.Company}}</p>
+            <p>Repositories:{{response.Repositories}}</p>
         </div>
     </div>
 </div>

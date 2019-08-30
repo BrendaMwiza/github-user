@@ -12,6 +12,8 @@ import { HttpClient } from '@angular/common/http';
 export class GitComponent implements OnInit {
 
   user:GitUser;
+  name:string = "";
+  response:any;
 
 
   constructor(gitService:GitService, private http:HttpClient) {
@@ -27,12 +29,19 @@ export class GitComponent implements OnInit {
       Company:string;
       avatar_url:string;
     }
-
-    this.http.get<ApiResponse>("https://api.github.com/users/daneden?access_token=77b86016a5dd86ee5452cfed26fce05c0df89333").subscribe(data=>{
-      // Succesful API request
-      this.user = new GitUser(data.Name, data.Bio, data.Repositories, data.Email, data.Location, data.Company, data.avatar_url)
-    })
   }
+    search(){
+      this.http.get("https://api.github.com/users/daneden?access_token=77b86016a5dd86ee5452cfed26fce05c0df89333").subscribe((response)=>{
+        this.response = response;
+        console.log(this.response);
+      })
+    }
 
+    // this.http.get<ApiResponse>("https://api.github.com/users/daneden?access_token=77b86016a5dd86ee5452cfed26fce05c0df89333").subscribe(data=>{
+    //   // Succesful API request
+    //   this.user = new GitUser(data.Name, data.Bio, data.Repositories, data.Email, data.Location, data.Company, data.avatar_url)
+    // })
+  
 }
+  
 
