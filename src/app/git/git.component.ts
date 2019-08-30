@@ -8,10 +8,7 @@ import { GitUser } from '../git-user';
 })
 export class GitComponent implements OnInit {
 
-  infos: GitUser[]= [
-    
-  ]
-
+  infos: GitUser[];
   constructor() { }
 
   ngOnInit() {
