@@ -6,9 +6,9 @@ import { GitUser } from '../git-user';
 })
 export class GitService {
 
-  getGitUser(){
-    return GitUser
-  }
+  // getGitUser(){
+  //   return GitUser
+  // }
 
   constructor() { }
 }
